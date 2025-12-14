@@ -159,6 +159,7 @@ li {
     .sa-smartideathon2022 {
         padding-top: 0px;
     }
+
     .sa-smartideathon2022 {
         padding-bottom: 0px;
     }
@@ -232,7 +233,7 @@ li {
 /*header*/
 
 header {
-    width: 100%;    
+    width: 100%;
     height: auto;
     padding: 5px 0px;
 }
@@ -384,9 +385,12 @@ header {
     color: #fff;
     text-align: justify;
 }
+
 .colored-question {
-    color: #F4E4C9; /* Choose your desired color */
-    font-weight: bold; /* Optional: Makes it stand out more */
+    color: #F4E4C9;
+    /* Choose your desired color */
+    font-weight: bold;
+    /* Optional: Makes it stand out more */
 }
 
 .sa-smart ul {
@@ -796,6 +800,7 @@ header {
     font-size: 60px;
     margin-top: 0px;
 }
+
 .sa-timeline ul li .ti-card p {
     color: var(--white);
     padding: 0px;
@@ -804,38 +809,55 @@ header {
 
 .sa-timeline ul li .ti-card {
     display: flex;
-    align-items: center;
-    padding: 0 0 0 150px;
-    justify-content: flex-start;
+    align-items: flex-start;
+    /* Align to top */
+    padding: 20px;
+    /* Comfortable padding */
+    background: rgba(255, 255, 255, 0.1);
+    /* Glassmorphic background */
+    border-radius: 12px;
+    /* Smooth corners */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    height: 100%;
+    /* Full height for grid alignment */
+    transition: transform 0.3s ease;
+}
+
+.sa-timeline ul li .ti-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 @media (max-width: 768px) {
     .sa-timeline ul li .ti-card {
-        padding-left: 10px;
+        padding: 15px;
     }
 }
 
 .sa-timeline ul li .ti-card .calender {
-    margin-right: 15px;
-    width: 56px;
-    height: 56px;
-    min-width: 56px;
-    min-height: 56px;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 50%;
+    /* Circular number */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #DD736E;
     flex-shrink: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .sa-timeline ul li .ti-card .calender p {
-    font-size: 25px;
+    font-size: 22px;
     color: #F4E4C9;
     line-height: 1;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
     padding: 0;
 }
@@ -848,29 +870,38 @@ header {
 }
 
 .sa-timeline ul li .ti-card .tiContent .tiContentDate {
-    font-size: 20px;
+    font-size: 16px;
     color: var(--white);
     font-weight: 600;
+    margin-bottom: 5px;
+    opacity: 0.9;
+    letter-spacing: 0.5px;
 }
 
 .sa-timeline ul li .ti-card .tiContent .tiContenttitle {
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     color: #F4E4C9;
     margin: 0;
     padding: 0;
-    line-height: 1.3;
+    line-height: 1.4;
+    text-transform: capitalize;
 }
 
 .sa-winner .row {
     align-items: center;
 }
+
 .content ul {
-    font-size: 50px; /* Adjust font size for the list */
-    line-height: 1.6; /* Optional: Adjust line spacing for readability */
+    font-size: 50px;
+    /* Adjust font size for the list */
+    line-height: 1.6;
+    /* Optional: Adjust line spacing for readability */
 }
+
 .content ul li {
-    font-size: 20px; /* Ensures consistency for list items */
+    font-size: 20px;
+    /* Ensures consistency for list items */
 }
 
 
@@ -885,14 +916,33 @@ header {
 .timeline {
     list-style: none;
     display: grid;
-    grid-template-columns: auto auto auto;
-    row-gap: 0;
-    column-gap: 22px;
-    margin: 0px
+    grid-template-columns: repeat(3, 1fr);
+    /* Equal width columns */
+    gap: 30px;
+    /* Consistent gap */
+    margin: 0;
+    padding: 0;
 }
 
 .timeline li {
-    margin-top: 20px;
+    margin-top: 0;
+    /* Handled by gap */
+    height: 100%;
+    /* Ensure full height */
+}
+
+@media (max-width: 992px) {
+    .timeline {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        /* 1 column on mobile */
+    }
 }
 
 .footer p {
@@ -903,30 +953,38 @@ header {
     .w-50 {
         width: 100% !important;
     }
+
     .sa-banner .carousel-control-prev {
         left: 0px;
     }
+
     .sa-banner .carousel-control-next {
         right: 0px;
     }
+
     .sa-banner .container,
     .sa-banner .container .row .col-md-12 {
         padding: 0px;
     }
+
     .sa-banner .carousel-indicators [data-bs-target] {
         width: 5px;
         height: 5px;
     }
+
     .header {
         position: relative;
         z-index: -1;
     }
+
     .menu {
         display: block;
     }
+
     .menu-icon {
         display: block;
     }
+
     .menu {
         position: fixed;
         top: 0px;
@@ -940,39 +998,48 @@ header {
         background: rgba(255, 255, 255, 0.8);
         backdrop-filter: blur(7px);
     }
+
     .menu.active {
         transform: translateX(0);
     }
+
     .menu ul li {
         margin: 0px;
         margin-left: 0px;
         border-bottom: 1px solid #ddd;
     }
+
     .menu ul li:nth-child(1) {
         margin-left: 0px;
     }
+
     .menu ul {
         display: block;
         margin-top: 30px;
         padding: 0px;
     }
+
     .menu ul li a {
         padding: 10px 30px;
         display: block;
     }
+
     .herosection .heroContent {
         padding: 20px;
         text-align: center;
     }
+
     .heading,
     .herosection .heroContent h1,
     .sa-winner .heading {
         font-size: 24px;
     }
+
     p {
         font-size: 15px;
         font-weight: 200;
     }
+
     .herosection,
     .sa-about,
     .sa-smart,
@@ -985,25 +1052,32 @@ header {
         padding: 30px 0px;
         position: relative;
     }
+
     .footer {
         padding-bottom: 0px;
     }
+
     .sa-smart ul {
         grid-template-columns: auto auto;
         row-gap: 25px;
     }
+
     .sa-eligibility {
         padding: 30px 0px;
     }
+
     .sa-eligibility .content {
         width: 100%;
     }
+
     .sa-process .content {
         width: 100%;
     }
+
     .herosection .heroContent h1 {
         font-size: 32px;
     }
+
     /* 
     .footer .fa-logo {
         width: 100%;
@@ -1013,6 +1087,7 @@ header {
         font-size: 15px;
         font-weight: 200;
     }
+
     .timeline {
         grid-template-columns: auto auto;
     }
@@ -1030,40 +1105,49 @@ header {
         margin: 0% auto;
         margin-bottom: 30px;
     }
+
     #feedback {
         width: 100%;
         top: inherit;
         bottom: 0px;
         padding: 10px 0px;
     }
+
     .sa-timeline ul li {
         margin-bottom: 20px;
     }
 }
 
 @media only screen and (max-width: 600px) {
+
     .heading,
     .herosection .heroContent h1,
     .sa-winner .heading {
         font-size: 24px;
     }
+
     .saSubHeading {
         font-size: 20px;
     }
+
     .sa-winner .content ul {
         padding: 0px;
         padding-left: 10px;
     }
+
     .sa-about .content {
         padding: 10px;
     }
+
     .saimg {
         margin-bottom: 10px;
         margin-top: 10px;
     }
+
     .herosection {
         padding-bottom: 0px;
     }
+
     .herosection .azadi {
         width: 220px;
         margin-bottom: 20px;
@@ -1071,6 +1155,7 @@ header {
 }
 
 @media only screen and (max-width: 540px) {
+
     .heading,
     .herosection .heroContent h1,
     .sa-winner .heading,
@@ -1079,32 +1164,40 @@ header {
         text-align: center !important;
         margin-bottom: 25px;
     }
+
     .sa-smart ul li .sa-card .img {
         width: 80px;
     }
+
     .sa-smart ul li .sa-card h6 {
         font-size: 12px;
     }
+
     .sa-smart ul li .sa-card .img:before {
         width: 25px;
         height: 25px;
         right: -9px;
     }
+
     .sa-smart ul {
         column-gap: 10px;
         row-gap: 10px;
     }
+
     .logo img {
         width: 250px;
         height: auto;
         align-items: center;
     }
+
     .herosection .heroContent {
         padding: 5px;
     }
+
     .herosection .heroContent p {
         font-size: 15px;
     }
+
     .timeline {
         grid-template-columns: auto;
     }
@@ -1114,6 +1207,7 @@ header {
     .logo {
         width: 220px;
     }
+
     .industry_partners img {
         width: 100% !important;
     }
@@ -1194,6 +1288,7 @@ header {
         display: flex;
         flex-wrap: wrap;
     }
+
     .statistics_bg .line {
         margin-bottom: 20px;
     }
@@ -1203,6 +1298,7 @@ header {
     .statistics_bg .line {
         display: none !important;
     }
+
     .stat-width {
         text-align: center;
         margin-right: 27px;
