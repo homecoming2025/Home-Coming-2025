@@ -1,5 +1,5 @@
 /*Banner Carousel Auto-play with Loop*/
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var carousel = document.getElementById('carouselExampleIndicators');
     if (carousel) {
         var bootstrapCarousel = new bootstrap.Carousel(carousel, {
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /*testmonial section start*/
-$(document).ready(function() {
+$(document).ready(function () {
     $('.testimonial-slider').slick({
         autoplay: true,
         autoplaySpeed: 1000,
@@ -20,22 +20,24 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         dots: true,
         responsive: [{
-                breakpoint: 991,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                }
+            breakpoint: 991,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
             }
+        },
+        {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }
         ]
     });
 });
@@ -44,9 +46,9 @@ $(document).ready(function() {
 /*masnory gallery section start*/
 
 
-$(window).load(function() {
+$(window).load(function () {
 
-    $("section img").click(function() {
+    $("section img").click(function () {
         $(".lightbox").fadeIn(300);
         $(".lightbox").append("<img src='" + $(this).attr("src") + "' alt='" + $(this).attr("alt") + "' />");
         $(".filter").css("background-image", "url(" + $(this).attr("src") + ")");
@@ -64,14 +66,14 @@ $(window).load(function() {
         }
     });
 
-    $(".close").click(function() {
+    $(".close").click(function () {
         $(".lightbox").fadeOut(300);
         $("h1").remove();
         $(".lightbox img").remove();
         $("html").css("overflow", "auto");
     });
 
-    $(document).keyup(function(e) {
+    $(document).keyup(function (e) {
         if (e.keyCode == 27) {
             $(".lightbox").fadeOut(300);
             $(".lightbox img").remove();
@@ -79,7 +81,7 @@ $(window).load(function() {
         }
     });
 
-    $(".arrowr").click(function() {
+    $(".arrowr").click(function () {
         var imgSrc = $(".lightbox img").attr("src");
         var search = $("section").find("img[src$='" + imgSrc + "']");
         var newImage = search.next().attr("src");
@@ -94,7 +96,7 @@ $(window).load(function() {
         }
     });
 
-    $(".arrowl").click(function() {
+    $(".arrowl").click(function () {
         var imgSrc = $(".lightbox img").attr("src");
         var search = $("section").find("img[src$='" + imgSrc + "']");
         var newImage = search.prev().attr("src");

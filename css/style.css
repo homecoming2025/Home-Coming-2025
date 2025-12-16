@@ -144,10 +144,8 @@ li {
 
 .herosection,
 .sa-about,
-.sa-smart,
-.sa-process,
-.sa-winner,
-.sa-sliders,
+
+
 .sa-timeline,
 .sa-smartideathon2022 {
     width: 100%;
@@ -393,68 +391,7 @@ header {
     /* Optional: Makes it stand out more */
 }
 
-.sa-smart ul {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    column-gap: 25px;
-    padding: 0px;
-    row-gap: 25px;
-}
 
-.sa-smart ul li {
-    width: 100%;
-    height: auto;
-    background: #F4E4C9;
-    padding: 15px;
-    position: relative;
-    box-shadow: 9px 9px 32px rgb(0 0 0 / 5%);
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.sa-smart ul li p {
-    color: #4394f9;
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.sa-smart ul li:before {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 3px;
-    top: 0px;
-    left: 0px;
-    transition: all 0.3s ease-in-out;
-}
-
-.sa-smart ul li:hover {
-    transform: translateY(-10px);
-}
-
-.sa-smart ul li:hover:before {
-    width: 100%;
-}
-
-.sa-smart ul li .sa-card .img {
-    width: 105px;
-    margin: 0% auto;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
-}
-
-.sa-smart ul li .sa-card .img:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    width: 35px;
-    height: 35px;
-    top: 3px;
-    right: -13px;
-    border-radius: 100px;
-}
 
 .sa-Relevant {
     background: var(--black);
@@ -465,34 +402,10 @@ header {
 }
 
 
-.gicolor1:before {
-    background: #FFBCBC
-}
 
 
-.gicolor2:before {
-    background: #FFBCBC
-}
 
 
-.gicolor3:before {
-    background: #FFBCBC
-}
-
-.gicolor4:before {
-    background: #FFBCBC
-}
-
-
-.sa-smart ul li .sa-card .img img {
-    width: 100%;
-    height: 100%;
-}
-
-.sa-smart ul li .sa-card h6 {
-    font-size: 18px;
-    color: var(--black);
-}
 
 .sa-eligibility {
     width: 100%;
@@ -546,23 +459,12 @@ header {
     text-align: justify;
 }
 
-.sa-process {
-    background: #fdfdfd;
-}
 
-.sa-process .content {
-    width: 50%;
-    margin: 0% auto;
-    text-align: center;
-}
 
-.sa-process .accordion,
 .sa-smartideathon2022 .accordion {
     --bs-accordion-bg: transparent;
 }
 
-.sa-process .accordion-body ul li,
-.sa-winner ul li,
 .sa-smartideathon2022 ul li {
     list-style: disc;
     font-size: 18px;
@@ -571,21 +473,7 @@ header {
     margin: 0 0 10px;
 }
 
-.accordion .sa-winner .saimg {
-    width: 100%
-}
 
-.sa-winner .saimg {
-    width: 100%;
-}
-
-.sa-winner .saimg img {
-    width: 100%;
-}
-
-.sa-winner .heading {
-    font-size: 32px;
-}
 
 .associate_sponsors .slider img {
     width: 100%;
@@ -597,37 +485,7 @@ header {
     margin: 20px;
 }
 
-.gi-slider-nav .slick-slide {
-    margin: 15px;
-}
 
-.slick-dots {
-    display: block;
-}
-
-.slick-dots li.slick-active button:before {
-    color: #007367;
-}
-
-.slick-next:before,
-.slick-prev:before {
-    color: #007367;
-    font-size: 24px;
-}
-
-.gi-slider-nav .sliders {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    height: 200px;
-}
-
-.gi-slider-nav .sliders img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center top;
-}
 
 .anchor {
     display: block;
@@ -807,27 +665,23 @@ header {
     margin: 0px;
 }
 
+.sa-timeline .ti-card,
 .sa-timeline ul li .ti-card {
     display: flex;
     align-items: flex-start;
-    /* Align to top */
-    padding: 20px;
-    /* Comfortable padding */
-    background: rgba(255, 255, 255, 0.1);
-    /* Glassmorphic background */
-    border-radius: 12px;
-    /* Smooth corners */
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    height: 100%;
-    /* Full height for grid alignment */
-    transition: transform 0.3s ease;
+    padding: 0;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
+.sa-timeline .ti-card:hover,
 .sa-timeline ul li .ti-card:hover {
-    transform: translateY(-5px);
-    background: rgba(255, 255, 255, 0.15);
+    background: transparent !important;
+    transform: none !important;
 }
+
+
 
 @media (max-width: 768px) {
     .sa-timeline ul li .ti-card {
@@ -836,21 +690,19 @@ header {
 }
 
 .sa-timeline ul li .ti-card .calender {
-    margin-right: 20px;
+    position: absolute;
+    left: -60px;
+    top: 0;
     width: 50px;
     height: 50px;
-    min-width: 50px;
-    min-height: 50px;
-    text-align: center;
-    border-radius: 50%;
-    /* Circular number */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background: #DD736E;
-    flex-shrink: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    box-shadow: 0 0 0 5px #007367;
+    /* Creates a gap effect from the line */
 }
 
 .sa-timeline ul li .ti-card .calender p {
@@ -914,36 +766,31 @@ header {
 }
 
 .timeline {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Equal width columns */
-    gap: 30px;
-    /* Consistent gap */
-    margin: 0;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 0;
+    list-style: none;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.3);
+    border-left: 2px dashed rgba(255, 255, 255, 0.3);
 }
 
 .timeline li {
-    margin-top: 0;
-    /* Handled by gap */
-    height: 100%;
-    /* Ensure full height */
+    position: relative;
+    margin-bottom: 40px;
+    padding-left: 60px;
 }
 
-@media (max-width: 992px) {
-    .timeline {
-        grid-template-columns: repeat(2, 1fr);
-        /* 2 columns on tablets */
-    }
-}
-
-@media (max-width: 768px) {
-    .timeline {
-        grid-template-columns: 1fr;
-        /* 1 column on mobile */
-    }
-}
+@media (max-width: 768px) {}
 
 .footer p {
     font-size: 15px;
@@ -1088,9 +935,7 @@ header {
         font-weight: 200;
     }
 
-    .timeline {
-        grid-template-columns: auto auto;
-    }
+
 }
 
 @media only screen and (max-width: 1199px) and (min-width: 993px) {
@@ -1198,9 +1043,7 @@ header {
         font-size: 15px;
     }
 
-    .timeline {
-        grid-template-columns: auto;
-    }
+
 }
 
 @media only screen and (max-width: 420px) {
@@ -1304,4 +1147,60 @@ header {
         margin-right: 27px;
         margin-bottom: 30px !important;
     }
+}
+
+/* Slick Slider Arrows */
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'FontAwesome' !important;
+    /* Fallback or specific font */
+    font-size: 40px !important;
+    color: #007367 !important;
+    opacity: 1 !important;
+    display: block !important;
+}
+
+.slick-prev:before {
+    content: "\f104" !important;
+    /* FontAwesome angle-left */
+}
+
+.slick-next:before {
+    content: "\f105" !important;
+    /* FontAwesome angle-right */
+}
+
+.slick-prev,
+.slick-next {
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 100 !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    /* Add background for visibility */
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.slick-prev {
+    left: -10px !important;
+}
+
+.slick-next {
+    right: -10px !important;
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    background: #007367 !important;
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    color: #fff !important;
 }
